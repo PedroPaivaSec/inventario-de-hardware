@@ -1,3 +1,8 @@
+<?php
+
+require_once __DIR__ . "/php/connect.php";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,10 +33,10 @@
 
         <form action="login.php" method="POST">
             <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            <input type="text" name="username" placeholder="Digite seu usuário" required>
 
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            <input type="password" name="password" placeholder="Digite sua senha" required>
 
             <button type="submit">Entrar</button>
         </form>

@@ -1,15 +1,20 @@
 <?php
 
+session_start();
+
 $host = 'localhost';
 $dbname = 'inventarioHardware';
 $user = 'root';
 $passwd = '';
+$options = [
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+];
 
 $dsn = "mysql:host=$host;dbname=$dbname";
 
 try{
 
-$pdo = new PDO($dsn, $user, $passwd);
+$pdo = new PDO($dsn, $user, $passwd, $options);
 
 }catch(PDOException $e){
 

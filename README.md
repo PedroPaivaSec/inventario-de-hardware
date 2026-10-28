@@ -69,8 +69,8 @@ E acessar `http://localhost:8000`.
 
 - [x] Layout das quatro páginas
 - [x] Tema escuro com variáveis CSS
-- [ ] Script SQL com as tabelas `usuarios` e `equipamentos`
-- [ ] Conexão com o MySQL usando PDO
+- [x] Script SQL com as tabelas `usuarios` e `equipamentos`
+- [x] Conexão com o MySQL usando PDO
 - [ ] Login com sessão
 - [ ] Proteção das páginas para usuários não autenticados
 - [ ] Cadastro de equipamento gravando no banco

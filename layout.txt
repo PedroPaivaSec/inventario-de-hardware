@@ -1,0 +1,3 @@
+Meu site consiste em uma plataforma privada para profissionais de suporte técnico em hardware, onde os profissionais registram seus serviços que estão fazendo no momento para fins de organização e gestão de trabalho. O layout para o PHP  está na página de login (Não haverá cadastro inicialmente por ser administrada apenas por 1 usuário) e na pagina "adicionar equipamento" que será onde o profissional fará  registro dos serviços em aberto/concluídos. Á página inicial irá mostrar o resumo geral da plataforma e a aba equipamentos ira listar todos os serviços organizados em um só lugar.
+
+OBS: Os valores cadastrados no html atualmente são fictícios para fins de ilustrar o modelo final do site com produtos cadastrados

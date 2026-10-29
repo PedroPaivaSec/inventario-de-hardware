@@ -1,8 +1,8 @@
  <?php
 
-require_once __DIR__ . "/requires.php";
+declare(strict_types=1);
 
-    function loginValidate($pdo)
+    function loginValidate(PDO $pdo): array
     {
         $query = "SELECT id, senha_hash FROM usuarios WHERE usuario = :nome";
         $stmt = $pdo->prepare($query);

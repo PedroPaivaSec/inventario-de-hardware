@@ -1,7 +1,6 @@
 <?php
 
 require_once __DIR__ . "/php/requires.php";
-var_dump($_SESSION);
 
 ?>
 <!DOCTYPE html>

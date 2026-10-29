@@ -1,3 +1,9 @@
+<?php
+
+require_once __DIR__ . "/php/requires.php";
+travaLogin();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,10 +18,10 @@
         <h1>Inventário de Hardware</h1>
 
         <nav>
-            <a href="index.html">Início</a>
-            <a href="equipamentos.html">Equipamentos</a>
-            <a href="adicionar_equipamento.html" class="active">Adicionar equipamento</a>
-            <a href="login.html">Login</a>
+            <a href="index.php">Início</a>
+            <a href="equipamentos.php">Equipamentos</a>
+            <a href="adicionar_equipamento.php" class="active">Adicionar equipamento</a>
+            <a href="login.php">Login</a>
         </nav>
 
         <footer>

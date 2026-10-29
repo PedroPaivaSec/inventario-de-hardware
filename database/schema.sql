@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS inventarioHardware;
 
-USE inventario_hardware;
+USE inventarioHardware;
 
 CREATE TABLE usuarios (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -17,3 +17,5 @@ CREATE TABLE equipamentos (
   status ENUM('Recebido', 'Em conserto', 'Pronto', 'Entregue') NOT NULL DEFAULT 'Recebido',
   data_entrada DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO usuarios (usuario, senha_hash) VALUES ('Teste', '$2y$12$nrYmVv0zgYR29lRBez3TB.0FIW2L9hOy5ds//U0OkLyBZckO8aLYu');

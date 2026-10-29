@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $host = 'localhost';
 $dbname = 'inventarioHardware';
 $user = 'root';

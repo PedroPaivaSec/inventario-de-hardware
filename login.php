@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . "/php/connect.php";
+require_once __DIR__ . "/php/requires.php";
+var_dump($_SESSION);
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ require_once __DIR__ . "/php/connect.php";
         <h1>Inventário de Hardware</h1>
 
         <nav>
-            <a href="index.html">Início</a>
+            <a href="login.php">Login</a>
         </nav>
 
         <footer>
@@ -31,7 +32,7 @@ require_once __DIR__ . "/php/connect.php";
             <p>Acesse sua conta</p>
         </div>
 
-        <form action="login.php" method="POST">
+        <form action="/php/loginBack.php" method="POST">
             <label for="username">Usuário:</label>
             <input type="text" name="username" placeholder="Digite seu usuário" required>
 

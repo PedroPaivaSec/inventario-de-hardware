@@ -10,11 +10,10 @@ $options = [
 
 $dsn = "mysql:host=$host;dbname=$dbname";
 
-try{
+try {
 
-$pdo = new PDO($dsn, $user, $passwd, $options);
-
-}catch(PDOException $e){
+    $pdo = new PDO($dsn, $user, $passwd, $options);
+} catch (PDOException $e) {
 
     error_log('Falha ao conectar ao banco: ' . $e->getMessage());
     die('Falha ao conectar ao banco.');

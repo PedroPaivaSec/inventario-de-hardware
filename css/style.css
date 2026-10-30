@@ -74,6 +74,10 @@ footer {
     margin-top: auto;
 }
 
+.flash {
+  color: var(--text);
+}
+
 button:hover {
     background-color: var(--accent-hover);
 }

@@ -71,8 +71,10 @@ E acessar `http://localhost:8000`.
 - [x] Tema escuro com variáveis CSS
 - [x] Script SQL com as tabelas `usuarios` e `equipamentos`
 - [x] Conexão com o MySQL usando PDO
-- [ ] Login com sessão
-- [ ] Proteção das páginas para usuários não autenticados
+- [x] Login com sessão
+- [x] Proteção das páginas para usuários não autenticados
+- [ ] Sistema de logout
+- [ ] Configuração de cookies
 - [ ] Cadastro de equipamento gravando no banco
 - [ ] Listagem de equipamentos vinda do banco
 - [ ] Atualização do status de um equipamento

@@ -8,3 +8,12 @@ function travaLogin(): void
         exit;
     }
 }
+
+function bloqueioPost(): void
+{
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header('Location: http://localhost:8000/login.php');
+        error_log('Método indevido.');
+        exit();
+    }
+}

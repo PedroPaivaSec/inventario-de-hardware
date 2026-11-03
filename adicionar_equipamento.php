@@ -21,7 +21,9 @@ travaLogin();
             <a href="index.php">Início</a>
             <a href="equipamentos.php">Equipamentos</a>
             <a href="adicionar_equipamento.php" class="active">Adicionar equipamento</a>
-            <a href="login.php">Login</a>
+            <form class="logout" action="/php/logout.php" method="POST">
+                <button class="logout-button" type="submit">Sair</button>
+            </form>
         </nav>
 
         <footer>

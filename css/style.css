@@ -119,16 +119,36 @@ input:focus {
     gap: 8px;
 }
 
-.sidebar nav a {
+.sidebar nav a,
+.sidebar nav .logout-button {
     color: var(--text-secondary);
     padding: 8px 12px;
     border-radius: var(--radius);
     text-decoration: none;
+    background: transparent;
+    border: none;
+    font: inherit;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
-.sidebar nav a:hover {
+.sidebar nav a:hover,
+.sidebar nav .logout-button:hover {
   background: var(--bg);
   color: var(--text);
+}
+
+.sidebar nav .logout {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-sizing: border-box;
 }
 
 .sidebar nav a.active {

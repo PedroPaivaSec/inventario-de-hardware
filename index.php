@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/php/requires.php";
 travaLogin();
+var_dump($_SESSION);
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +24,9 @@ travaLogin();
             <a href="index.php" class="active">Início</a>
             <a href="equipamentos.php">Equipamentos</a>
             <a href="adicionar_equipamento.php">Adicionar equipamento</a>
-            <a href="login.php">Sair</a>
+            <form class="logout" action="/php/logout.php" method="POST">
+                <button class="logout-button" type="submit">Sair</button>
+            </form>
         </nav>
 
         <footer>

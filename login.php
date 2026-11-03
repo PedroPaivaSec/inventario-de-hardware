@@ -3,6 +3,7 @@
 require_once __DIR__ . "/php/requires.php";
 $flash = $_SESSION['flash'] ?? [];
 unset($_SESSION['flash']);
+var_dump($_SESSION);
 
 ?>
 <!DOCTYPE html>

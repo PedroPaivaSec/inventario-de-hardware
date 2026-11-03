@@ -17,14 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($registro !== false) {
 
                 if (password_verify($pass, $registro['senha_hash'])) {
-
+                    session_regenerate_id(true);
                     $_SESSION['user_id'] = $registro['id'];
                     $_SESSION['user_name'] = $user;
                     header("Location: " . BASE_URL . "/index.php");
-                    exit();
-                } else {
-                    $_SESSION['flash'] = ['erro' => 'Usuário ou senha incorretos.'];
-                    header("Location: " . BASE_URL . "/login.php");
                     exit();
                 }
             } else {

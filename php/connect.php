@@ -1,9 +1,9 @@
 <?php
 
-$host = 'localhost';
-$dbname = 'inventariohardware';
-$user = 'task';
-$passwd = '';
+$host = 'sql_server';
+$dbname = 'inventario_hard_db';
+$user = 'USER';
+$passwd = 'PASS';
 $options = [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 ];

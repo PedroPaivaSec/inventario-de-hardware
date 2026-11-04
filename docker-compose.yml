@@ -1,0 +1,18 @@
+services:
+  server_apache:
+    image: php:8.5.12-apache
+    container_name: inventario_hard
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+  sql_server:
+    image: mysql:8.4.13
+    container_name: inventario_hard_db
+    ports:
+      - 3306:3306
+    volumes:
+      - .:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_NAME}
+      MYSQL_DATABASE: ${DB_ROOT_PASS}

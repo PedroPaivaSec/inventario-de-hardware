@@ -3,9 +3,7 @@
 require_once __DIR__ . '/requires.php';
 bloqueioPost();
 
-if (session_status() === PHP_SESSION_ACTIVE) {
-    session_unset();
-    session_destroy();
-    header('Location: ' . BASE_URL . '/login.php');
-    exit();
-}
+session_unset();
+session_destroy();
+header('Location: ' . BASE_URL . '/login.php');
+exit();

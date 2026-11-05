@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS inventarioHardware;
+CREATE DATABASE IF NOT EXISTS inventariohardware;
 
-USE inventarioHardware;
+USE inventariohardware;
 
 CREATE TABLE usuarios (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

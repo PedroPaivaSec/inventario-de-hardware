@@ -37,7 +37,7 @@ travaLogin();
             <p>Cadastre um novo aparelho recebido</p>
         </div>
 
-        <form action="" method="POST">
+        <form action="novo_equip.php" method="POST" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="cliente">Cliente:</label>
@@ -52,6 +52,11 @@ travaLogin();
             <div class="form-group">
                 <label for="problema">Problema relatado:</label>
                 <input type="text" id="problema" name="problema" placeholder="Ex: Não liga, tela quebrada" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imagem">Selecione uma imagem</label>
+                <input type="file" id="imagem" name="foto" accept="image/jpeg, image/png, image/webp">
             </div>
 
             <button type="submit">Cadastrar equipamento</button>

@@ -12,7 +12,7 @@ function travaLogin(): void
 function bloqueioPost(): void
 {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-        header('Location: http://localhost:8000/login.php');
+        header('Location: " . BASE_URL . "/login.php');
         error_log('Método indevido.');
         exit();
     }

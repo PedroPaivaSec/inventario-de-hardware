@@ -3,7 +3,7 @@
 require_once __DIR__ . "/requires.php";
 
 bloqueioPost();
-bloqueioCampoVazio($_POST);
+bloqueioCampoVazio();
 
 $user = trim($_POST['username']);
 $pass = $_POST['password'];

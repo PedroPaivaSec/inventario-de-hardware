@@ -64,8 +64,9 @@ function travaUpload(int $tamanho, array $tipo): string
     $finfo = new finfo(FILEINFO_MIME_TYPE);
     $mimeReal = $finfo->file($_FILES['foto']['tmp_name']);
 
-    if (!array_key_exists($mimeReal, $tipo[$mimeReal])) {
+    if (!array_key_exists($mimeReal, $tipo)) {
         flashMessageUpload('Tipo de arquivo não permitido.');
     }
+
     return $tipo[$mimeReal];
 }

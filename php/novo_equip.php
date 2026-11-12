@@ -13,8 +13,6 @@ $tipo = [
 $ext = travaUpload($tamanho, $tipo);
 $nomeRandom = bin2hex(random_bytes(16)) . "." . $ext;
 
-travaUpload($tamanho, $tipo);
-
 $caminho = __DIR__ . '/../img/';
 $destinoFinal = $caminho . $nomeRandom;
 

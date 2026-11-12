@@ -37,7 +37,7 @@ travaLogin();
             <p>Cadastre um novo aparelho recebido</p>
         </div>
 
-        <form action="novo_equip.php" method="POST" enctype="multipart/form-data">
+        <form action="php/novo_equip.php" method="POST" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="cliente">Cliente:</label>
@@ -56,7 +56,7 @@ travaLogin();
 
             <div class="form-group">
                 <label for="imagem">Selecione uma imagem</label>
-                <input type="file" id="imagem" name="foto" accept="image/jpeg, image/png, image/webp">
+                <input type="file" id="imagem" name="foto" accept="image/jpeg, image/png">
             </div>
 
             <button type="submit">Cadastrar equipamento</button>

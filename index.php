@@ -36,7 +36,7 @@ travaLogin();
     <main>
         <div class="page-header">
             <h1>Painel</h1>
-            <p>Resumo do que está acontecendo</p>
+            <p>Equipamentos prontos</p>
         </div>
 
         <div class="equipment-list">

@@ -22,3 +22,12 @@ function adicionarEquipamento(PDO $pdo, string $cliente, string $imagem, string 
         ':problema' => $problema
     ]);
 }
+
+function listarEquipamentos(PDO $pdo): array
+{
+    $query = "SELECT cliente, imagem, equipamento, problema FROM equipamentos";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $equip = $stmt->fetchAll();
+    return $equip;
+}

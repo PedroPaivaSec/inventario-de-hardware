@@ -1,8 +1,7 @@
 <?php
-
 require_once __DIR__ . "/php/requires.php";
 travaLogin();
-
+var_dump($_SESSION['flash']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

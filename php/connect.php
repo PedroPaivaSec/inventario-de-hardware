@@ -5,7 +5,8 @@ $dbname = 'inventariohardware';
 $user = 'task';
 $passwd = '';
 $options = [
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+//Especifica para a função fetch/fetchAll o retorno de apenas os nomes das colunas, sem os indices. Evita duplicidade de retorno de dados
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC  
 ];
 
 $dsn = "mysql:host=$host;dbname=$dbname";

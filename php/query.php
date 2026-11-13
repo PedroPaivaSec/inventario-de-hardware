@@ -7,6 +7,18 @@ function loginValidate(PDO $pdo, string $user)
     $stmt->execute([
         ':nome' => $user
     ]);
-    $registro = $stmt->fetch(PDO::FETCH_ASSOC);
+    $registro = $stmt->fetch();
     return $registro;
+}
+
+function adicionarEquipamento(PDO $pdo, string $cliente, string $imagem, string $equipamento, string $problema): void
+{
+    $query = "INSERT INTO equipamentos (cliente, imagem, equipamento, problema) VALUES (:cliente, :imagem, :equipamento, :problema)";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([
+        ':cliente' => $cliente,
+        ':imagem' => $imagem,
+        ':equipamento' => $equipamento,
+        ':problema' => $problema
+    ]);
 }

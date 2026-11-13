@@ -1,15 +1,21 @@
 <?php
 require_once __DIR__ . "/php/requires.php";
 travaLogin();
+
+$flash = $_SESSION['flash'] ?? '';
+unset($_SESSION['flash']);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Adicionar equipamento</title>
 </head>
+
 <body>
 
     <header class="sidebar">
@@ -59,9 +65,17 @@ travaLogin();
 
             <button type="submit">Cadastrar equipamento</button>
 
+            <?php if (isset($flash['erro'])) {
+                echo "<p class='flash'>" . htmlspecialchars($flash['erro'], ENT_QUOTES, 'UTF-8') . "</p>";
+            }
+            if (isset($flash['sucesso'])) {
+                echo "<p class='flash'>" . htmlspecialchars($flash['sucesso'], ENT_QUOTES, 'UTF-8') . "</p>";
+            } ?>
+
         </form>
 
     </main>
 
 </body>
+
 </html>

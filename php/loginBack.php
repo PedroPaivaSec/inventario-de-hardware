@@ -13,7 +13,7 @@ try {
 
     if ($registro === false || !password_verify($pass, $registro['senha_hash'])) {
 
-        $_SESSION['flash'] = ['erro' => 'Usuário ou senha incorretos.'];
+        flashMessageUpload('Usuário ou senha incorretos.');
         header("Location: " . BASE_URL . "/login.php");
         exit();
     }
@@ -23,9 +23,8 @@ try {
     $_SESSION['user_name'] = $user;
     header("Location: " . BASE_URL . "/index.php");
     exit();
-
 } catch (PDOException $e) {
-    $_SESSION['flash'] = ['erro' => 'Falha ao realizar consulta ao banco'];
+    flashMessageUpload('Falha ao realizar consulta ao banco.');
     error_log("Falha ao realizar consulta: " . $e->getMessage());
     header("Location: " . BASE_URL . "/login.php");
     exit();

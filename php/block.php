@@ -27,7 +27,7 @@ function bloqueioCampoVazio(): void
         $_POST['password'] === ''
     ) {
 
-        $_SESSION['flash'] = ['erro' => 'Preencha todos os campos.'];
+        flashMessageUpload('Preencha todos os campos.');
         header("Location: " . BASE_URL . "/login.php");
         exit();
     }

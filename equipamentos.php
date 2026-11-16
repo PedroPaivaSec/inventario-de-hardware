@@ -46,39 +46,21 @@ try {
         </div>
         <?php if (empty($equip)) : ?>
             <p class='flash'>Nenhuma equipamento disponivel.</p>
-            <?php else :
-            foreach ($equip as $equipamento) : ?>
+            <?php else : ?>
                 <div class="equipment-list">
+            <?php foreach ($equip as $equipamento) : ?>
 
                     <div class="equipment-item">
-                        <img src="img/notebook.jpg" alt="Notebook Dell" class="equipment-photo">
+                        <img src="img/<?php echo htmlspecialchars($equipamento['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="Notebook Dell" class="equipment-photo">
                         <div class="equipment-info">
-                            <span class="equipment-title">Notebook Dell — Maria Souza</span>
-                            <span class="equipment-desc">Troca de tela</span>
+                            <span class="equipment-title"><?php echo htmlspecialchars($equipamento['equipamento'], ENT_QUOTES, 'UTF-8') . " - " . htmlspecialchars($equipamento['cliente'], ENT_QUOTES, 'UTF-8'); ?></span>
+                            <span class="equipment-desc"><?php echo htmlspecialchars($equipamento['problema'], ENT_QUOTES, 'UTF-8'); ?></span>
                         </div>
-                        <span class="status">Pronto</span>
+                        <span class="status"><?php echo htmlspecialchars($equipamento['status'], ENT_QUOTES, 'UTF-8'); ?></span>
                     </div>
 
-                    <div class="equipment-item">
-                        <img src="img/pcgamer.jpg" alt="PC Gamer" class="equipment-photo">
-                        <div class="equipment-info">
-                            <span class="equipment-title">PC Gamer — João Ferreira</span>
-                            <span class="equipment-desc">Formatação</span>
-                        </div>
-                        <span class="status">Em conserto</span>
-                    </div>
-
-                    <div class="equipment-item">
-                        <img src="img/celular.jpg" alt="Celular Samsung" class="equipment-photo">
-                        <div class="equipment-info">
-                            <span class="equipment-title">Celular Samsung — Ana Lima</span>
-                            <span class="equipment-desc">Troca de bateria</span>
-                        </div>
-                        <span class="status">Recebido</span>
-                    </div>
-
+                    <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
         <?php endif; ?>
     </main>
 

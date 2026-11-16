@@ -160,8 +160,11 @@ input:focus {
 
 .equipment-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: calc(var(--space) / 2);
+  grid-template-columns: repeat(4, minmax(0, 280px));
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  width: 100%;
+  gap: var(--space);
 }
 
 .equipment-item {
@@ -188,6 +191,8 @@ input:focus {
   flex-direction: column;
   gap: 4px;
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .equipment-title {
@@ -206,4 +211,34 @@ input:focus {
   border-radius: var(--radius);
   font-size: 13px;
   white-space: nowrap;
+}
+
+/* ------------Responsivo------------ */
+
+@media (max-width: 1149px) {
+  .equipment-list {
+    grid-template-columns: repeat(3, minmax(0, 280px));
+  }
+}
+
+@media (max-width: 939px) {
+  .equipment-list {
+    grid-template-columns: repeat(2, minmax(0, 280px));
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .equipment-list {
+    grid-template-columns: minmax(0, 280px);
+  }
 }

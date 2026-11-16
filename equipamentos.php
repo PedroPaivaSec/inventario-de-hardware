@@ -46,9 +46,9 @@ try {
         </div>
         <?php if (empty($equip)) : ?>
             <p class='flash'>Nenhuma equipamento disponivel.</p>
-            <?php else : ?>
-                <div class="equipment-list">
-            <?php foreach ($equip as $equipamento) : ?>
+        <?php else : ?>
+            <div class="equipment-list">
+                <?php foreach ($equip as $equipamento) : ?>
 
                     <div class="equipment-item">
                         <img src="img/<?php echo htmlspecialchars($equipamento['imagem'], ENT_QUOTES, 'UTF-8'); ?>" alt="Notebook Dell" class="equipment-photo">
@@ -59,8 +59,8 @@ try {
                         <span class="status"><?php echo htmlspecialchars($equipamento['status'], ENT_QUOTES, 'UTF-8'); ?></span>
                     </div>
 
-                    <?php endforeach; ?>
-                </div>
+                <?php endforeach; ?>
+            </div>
         <?php endif; ?>
     </main>
 

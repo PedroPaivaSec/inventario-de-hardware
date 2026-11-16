@@ -53,19 +53,20 @@ function travaUpload(int $tamanho, array $tipo): string
         flashMessageUpload('Erro no arquivo.');
     }
 
-    if (!is_uploaded_file($_FILES['foto']['tmp_name'])) {
-        flashMessageUpload('Formato de envio não permitido.');
-    }
-
-    if ($tamanho < $_FILES['foto']['size']) {
-        flashMessageUpload('O tamanho do arquivo ultrapassou os limites permitidos.');
-    }
-
     $finfo = new finfo(FILEINFO_MIME_TYPE);
     $mimeReal = $finfo->file($_FILES['foto']['tmp_name']);
 
     if (!array_key_exists($mimeReal, $tipo)) {
         flashMessageUpload('Tipo de arquivo não permitido.');
+    }
+
+    if (!is_uploaded_file($_FILES['foto']['tmp_name'])) {
+        error_log('Método de envio não permitido.');
+        exit();
+    }
+
+    if ($tamanho < $_FILES['foto']['size']) {
+        flashMessageUpload('O tamanho do arquivo ultrapassou os limites permitidos.');
     }
 
     return $tipo[$mimeReal];

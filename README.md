@@ -6,7 +6,7 @@ Projeto final da disciplina de desenvolvimento web (curso de Gestão da Tecnolog
 
 ## Status do projeto
 
-Em desenvolvimento. O backend em PHP com MySQL já cobre toda a parte de autenticação: login com sessão, proteção das páginas internas e logout. As telas de equipamentos e do painel ainda exibem dados fictícios escritos direto no HTML, apenas para mostrar como o site fica com serviços cadastrados.
+Em desenvolvimento. O backend em PHP com MySQL já cobre toda a parte de autenticação: login com sessão, proteção das páginas internas e logout. O painel ainda exibe dados fictícios escritos direto no HTML, apenas para mostrar como o site fica com serviços concluídos.
 
 ## Como o sistema funciona
 

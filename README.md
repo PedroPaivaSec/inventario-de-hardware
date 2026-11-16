@@ -16,14 +16,14 @@ Em desenvolvimento. O backend em PHP com MySQL já cobre toda a parte de autenti
 - **Logout:** o botão **Sair**, na barra lateral, encerra a sessão e volta para o login.
 - **Adicionar equipamento:** o técnico registra o cliente, o equipamento e o problema relatado.
 - **Equipamentos:** lista de todos os serviços em um só lugar, com o status de cada um.
-- **Início:** painel com o resumo geral dos serviços.
+- **Início:** painel que lista os serviços prontos.
 
 ## Páginas
 
 |Página|Arquivo|Acesso|Função|
 |---|---|---|---|
 |Login|`login.php`|Público|Acesso do administrador|
-|Início|`index.php`|Restrito|Painel com o resumo geral|
+|Início|`index.php`|Restrito|Painel de listagem de itens concluídos|
 |Equipamentos|`equipamentos.php`|Restrito|Lista dos aparelhos em atendimento|
 |Adicionar equipamento|`adicionar_equipamento.php`|Restrito|Formulário de cadastro de um novo aparelho|
 
@@ -47,7 +47,8 @@ inventario_hardware/
 │   ├── loginBack.php
 │   ├── logout.php
 │   ├── query.php
-│   └── requires.php
+│   ├── requires.php
+|   └── novo_equip.php
 ├── itens_temporarios/
 │   └── hash_generator.php
 └── README.md
@@ -63,6 +64,7 @@ inventario_hardware/
 - `php/query.php` guarda as consultas ao banco, separadas da lógica de cada página.
 - `php/loginBack.php` processa o formulário de login.
 - `php/logout.php` encerra a sessão do usuário.
+- `php/novo_equip.php` cadastra um novo equipamento no banco de dados.
 - `itens_temporarios/hash_generator.php` gera o hash da senha do usuário de teste.
 
 ## Banco de dados
@@ -119,8 +121,8 @@ O `schema.sql` cria o usuário `Teste`. A senha dele é a que está definida em 
 - [x] Login com sessão
 - [x] Proteção das páginas para usuários não autenticados
 - [x] Sistema de logout
-- [ ] Cadastro de equipamento gravando no banco
-- [ ] Listagem de equipamentos vinda do banco
+- [x] Cadastro de equipamento gravando no banco
+- [x] Listagem de equipamentos vinda do banco
 - [ ] Atualização do status de um equipamento
 - [ ] Painel inicial com contagem por status (stored procedure)
 - [ ] Configuração de cookies da sessão
